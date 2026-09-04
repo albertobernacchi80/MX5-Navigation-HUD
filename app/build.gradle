@@ -1,0 +1,16 @@
+plugins { id 'com.android.application' }
+
+android { namespace 'com.mx5.navhud'; compileSdk 36
+    // applicationId proprio, diverso da com.mx5.driversmetrics (l'app con i gauge di
+    // guida) e da com.mx5.drivinginstruments (il progetto precedente): così le tre app
+    // possono restare installate insieme sullo stesso telefono, ciascuna selezionabile
+    // come app separata in Android Auto.
+    defaultConfig { applicationId 'com.mx5.navhud'; minSdk 28; targetSdk 36; versionCode 9; versionName '1.8' }
+}
+
+dependencies {
+    // Solo la libreria Android for Cars: nessuna dipendenza da sensori/GPS/email/Excel,
+    // perché questa app non fa nient'altro che l'HUD di navigazione.
+    implementation 'androidx.car.app:app:1.7.0'
+    implementation 'androidx.car.app:app-projected:1.7.0'
+}

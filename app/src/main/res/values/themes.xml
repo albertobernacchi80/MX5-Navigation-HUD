@@ -1,0 +1,14 @@
+<resources>
+    <style name="CarAppTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#FF4D4D</item>
+    </style>
+
+    <!-- Per NavAccessSettingsActivity: nessuna interfaccia propria (apre subito le
+         Impostazioni di sistema e si chiude), quindi basta un tema Material di sistema,
+         senza bisogno della libreria AppCompat. -->
+    <style name="NavAccessTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:colorAccent">#FF4D4D</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+</resources>
